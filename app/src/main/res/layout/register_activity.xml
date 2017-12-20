@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+<!-- <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tryhu.navivelo.RegisterActivity"
-    android:background="#C0FFA0"
-    android:theme="@style/Theme.AppCompat.NoActionBar">
+    android:background="@color/gray"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    tools:context="com.example.tryhu.navivelo.RegisterActivity">
 
 
     <TextView
@@ -20,8 +26,7 @@
         android:text="NAVIVELO"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp"
-        android:textStyle="bold"
-         />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/registerButton"
@@ -30,21 +35,39 @@
         android:layout_below="@+id/passwordRegisterText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:text="Zarejestruj się"
-         />
+        android:text="@string/register" />
+
+    <Button
+        android:id="@+id/registerButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="@string/register" />
+
+    <Button
+        android:id="@+id/registerButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerButton2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="@string/register" />
 
     <EditText
         android:id="@+id/nameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/nazwaAplikacji"
         android:layout_below="@+id/nazwaAplikacji"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:ems="10"
         android:hint="Imię"
         android:inputType="textPersonName"
         android:textColor="@android:color/background_dark"
         android:textColorHint="@android:color/darker_gray" />
+
 
     <EditText
         android:id="@+id/lastNameText"
@@ -62,9 +85,9 @@
         android:id="@+id/userName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/lastNameText"
         android:layout_below="@+id/lastNameText"
-        android:layout_marginTop="23dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:hint="Nazwa użytkownika"
         android:inputType="textPersonName"
@@ -95,6 +118,19 @@
         android:singleLine="false"
         android:textColorHint="@android:color/darker_gray" />
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/nazwaAplikacji">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="hint" />
+    </android.support.design.widget.TextInputLayout>
 
 
 </RelativeLayout>
+
+    <!--</ScrollView>-->

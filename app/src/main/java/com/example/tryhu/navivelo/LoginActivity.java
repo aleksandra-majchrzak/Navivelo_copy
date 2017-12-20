@@ -1,12 +1,14 @@
 package com.example.tryhu.navivelo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -19,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText loginPassword = (EditText) findViewById(R.id.loginPassword);
         TextView registerLink = (TextView) findViewById(R.id.registerLink);
 
+        loginPassword.setError("error");
 
         Button loginButton = (Button) findViewById(R.id.loginButton);
 
@@ -31,10 +34,13 @@ public class LoginActivity extends AppCompatActivity {
                 Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
                 LoginActivity.this.startActivity(registerIntent);
 
+                Toast.makeText(LoginActivity.this, R.string.app_name, Toast.LENGTH_SHORT).show();
+                Snackbar.make(findViewById(R.id.login_relativeLayout), R.string.app_name, Snackbar.LENGTH_INDEFINITE).show();
             }
 
 
+        });
 
-});
+        getString(R.string.app_name);
     }
 }
